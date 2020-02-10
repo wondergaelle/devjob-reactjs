@@ -3,9 +3,10 @@ import './App.scss';
 import {NavLink} from "react-router-dom";
 import {render} from "react-dom";
 import{Route} from "react-router";
-import Job from "./components/Job";
+import PageJobs from "./components/PageJobs";
 import JobCard from "./components/JobCard";
 import AddJob from "./components/AddJob";
+import PageHome from "./components/PageHome";
 
 class App extends Component {
 
@@ -32,19 +33,24 @@ class App extends Component {
 
 
             <main className="main-container">
-                <h1>Liste des offres d'emploi</h1>
+
 
                 <nav>
                     <ul>
-                        <li><NavLink to="/">Accueil</NavLink></li>
-                        <li><NavLink to="/job">Offres d'emploi</NavLink></li>
+                        <li><NavLink to="/pagehome">Accueil</NavLink></li>
+                        <li><NavLink to="/jobs">Offres d'emploi</NavLink></li>
                         <li><NavLink to="/addjob">Ajouter un emploi</NavLink></li>
                     </ul>
                 </nav>
 
                 <div className="page-container">
 
+                    <Route path="/pagehome" component={PageHome}/>
                     <Route path="/addjob" component={AddJob}/>
+                    <Route path="/jobs">
+                        <PageJobs jobs={this.state.jobs}/>
+                    </Route>
+
 
 
                 </div>
