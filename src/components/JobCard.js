@@ -16,17 +16,17 @@ class JobCard extends Component {
         return (
 
             <article className="job">
-                <h2>{job.title}</h2>
 
-                <p>{moment(job.createdAt).fromNow()}</p>
-                <div className="">
-                    <ul className="" >
-                        {skillsLi}
-                    </ul>
+
+                <h1>{job.title}</h1>
+                <div>
+                    <h3>{job.company}</h3>
+                    <ul>{skillsLi}</ul>
+
                 </div>
+                <h3>Offre ajoutée le :{moment(job.createdAt).fromNow()}</h3>
 
-                <Link to={"/job/" + job.slug}>Voir plus </Link>
-                <Route path="/job/" component={JobCard}/>
+
 
             </article>
 
