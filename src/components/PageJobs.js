@@ -3,7 +3,6 @@ import {Link} from "react-router-dom";
 import JobList from "./JobList";
 
 
-
 class PageJobs extends Component {
 
     render() {
@@ -14,7 +13,11 @@ class PageJobs extends Component {
         return (
             <div>
                 <h1>Offres d'emploi</h1>
-                <JobList jobs={jobs} />
+
+                    <JobList jobs={jobs}/>
+
+
+
             </div>
         );
     }
