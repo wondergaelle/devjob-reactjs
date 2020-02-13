@@ -16,8 +16,6 @@ class PageJobs extends Component {
 
                     <JobList jobs={jobs}/>
 
-
-
             </div>
         );
     }

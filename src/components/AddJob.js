@@ -46,7 +46,7 @@ class AddJob extends Component {
             <div className="offset-3 col-8">
 
                 <form className="mx-auto" onSubmit={this.submit}>
-                    <div className="form-group col-4">
+                    <div className="form-group col-8">
                         <label htmlFor="titre">Titre</label>
                         <input
                             type="text"
@@ -55,8 +55,7 @@ class AddJob extends Component {
                             onChange={this.change}
                                placeholder=""/>
                     </div>
-
-                    <div className="form-group col-4">
+                    <div className="form-group col-8">
                         <label htmlFor="entreprise">Entreprise</label>
                         <input
                             type="text"
@@ -65,15 +64,14 @@ class AddJob extends Component {
                             onChange={this.change}
                                placeholder=""/>
                     </div>
-
-                    <div className="form-group col-4">
-                        <label htmlFor="competences">Compétences</label>
-                        <select name="" id="competences" onChange={this.change}>
+                    <div className="form-group col-8">
+                        <label htmlFor="exampleFormControlSelect2">Compétences</label>
+                        <select class="form-control" id="competences" multiple="oui" onChange={this.change}>
                             {skills}
                         </select>
                     </div>
 
-                    <div className="form-group col-4">
+                    <div className="form-group col-8">
                         <label htmlFor="url">URL</label>
                         <input type="text"
                                className="form-control"
@@ -81,18 +79,18 @@ class AddJob extends Component {
                                onChange={this.change}
                                placeholder=""/>
                     </div>
-                    <div className="form-group col-4">
-                        <label htmlFor="description">description</label>
+                    <div className="form-group col-8">
+                        <label htmlFor="exampleFormControlTextarea1">description</label>
+
                         <input type="textarea"
                                className="form-control"
+                               rows="8"
                                id="description"
                                onChange={this.change}
-                               placeholder=""/>
+                             />
                     </div>
-                    <button  className="btn btn-primary">Submit</button>
+                    <button  className="btn btn-danger offset-4" >Envoyer</button>
                 </form>
-
-
             </div>
 
         );

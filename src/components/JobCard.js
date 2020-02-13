@@ -4,31 +4,39 @@ import moment from "moment";
 import "moment/locale/fr";
 import SkillLi from "./SkillLi";
 import {Route} from "react-router";
+import "./Job.scss";
 
 
 class JobCard extends Component {
+
+
     render() {
         const job = this.props.job;
 
-        const skillsLi = job.skills.map((skill, key) => <li key={key}><SkillLi skill={skill}/></li>)
+        const skillsLi = job.skills.map((skill, key) => <div className="list-skills"><span
+            className="badge badge-primary"> <div key={key}><SkillLi skill={skill}/></div> </span></div>)
 
 
         return (
 
-            <article className="job">
+            <div >
+                <div >
+                    <div class="card">
+                        <div >
+                            <h5 >{job.title}</h5>
+
+                            <div className="company badge badge-warning">{job.company}</div>
+
+                            <div class="row col">{skillsLi}</div>
 
 
-                <h1>{job.title}</h1>
-                <div>
-                    <h3>{job.company}</h3>
-                    <ul>{skillsLi}</ul>
-
+                            <div class="card-footer text-muted">Offre ajoutée le
+                                :{moment(job.createdAt).fromNow()}</div>
+                        </div>
+                    </div>
                 </div>
-                <h3>Offre ajoutée le :{moment(job.createdAt).fromNow()}</h3>
+            </div>
 
-
-
-            </article>
 
         );
     }

@@ -36,9 +36,7 @@ class App extends Component {
 
         return (
 
-
             <main className="main-container">
-
 
                 <nav>
                     <ul className="nav nav-fill">
@@ -50,9 +48,7 @@ class App extends Component {
                             emploi</NavLink></li>
                     </ul>
                 </nav>
-
                 <div className="page-container">
-
                     <Route path="/pagehome" component={PageHome}/>
                     <Route path="/addjob">
                         <AddJob skills={this.state.skills}/>
@@ -60,9 +56,7 @@ class App extends Component {
                     <Route path="/jobs">
                         <PageJobs jobs={this.state.jobs}/>
                     </Route>
-
                 </div>
-
 
             </main>
         );
