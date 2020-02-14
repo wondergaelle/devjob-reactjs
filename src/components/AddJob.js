@@ -21,6 +21,7 @@ class AddJob extends Component {
                 [e.target.id]: e.target.value
             });
         }
+        //this.setState({form : ""}); vider le formulaire ??
         console.log(this.state)
     };
 
